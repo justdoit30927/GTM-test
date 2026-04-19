@@ -12,14 +12,16 @@
     gtag('js', new Date());
 
     gtag('config', 'G-JZPEKR1EN8');
-
-    document.getElementById('submitButton').onclick = function() {
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById('submitButton').onclick = function() {
         var inputValue = document.getElementById('inputField').value;
         gtag('event', 'submit_button_click', {
             'event_category': 'interaction',
             'event_label': inputValue
         });
     };
+    });
+    
     </script>
 </head>
 <body>
