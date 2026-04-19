@@ -12,10 +12,20 @@
     gtag('js', new Date());
 
     gtag('config', 'G-JZPEKR1EN8');
+
+    document.getElementById('submitButton').onclick = function() {
+        var inputValue = document.getElementById('inputField').value;
+        gtag('event', 'submit_button_click', {
+            'event_category': 'interaction',
+            'event_label': inputValue
+        });
+    };
     </script>
 </head>
 <body>
     <input type="text" id="inputField" placeholder="Enter text here">
     <input type="button" id="submitButton" value="Submit">
+    <br/>
+    <a href="https://www.google.com" id="googleLink">Go to Google</a>
 </body>
 </html>
